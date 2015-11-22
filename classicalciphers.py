@@ -216,9 +216,10 @@ if __name__=='__main__':
 
     #Playfair test
     print('---Playfair Cipher---')
-    c = Playfair.encrypt('wearediscoveredsaveyourselfx'.upper(), 'monarchy'.upper())
+    key=Playfair.buildtable('monarchy'.upper())
+    c = Playfair.encrypt('wearediscoveredsaveyourselfx'.upper(), key)
     print(c)
-    d = Playfair.decrypt(c, 'monarchy'.upper())
+    d = Playfair.decrypt(c, key)
     print(d)
 
     #Polybius square test
