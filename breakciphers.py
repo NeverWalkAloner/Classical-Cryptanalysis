@@ -234,7 +234,7 @@ def breakplayfair(ciphertext):
 
 print(datetime.datetime.now())
 
-message = classicalciphers.readfile(r'C:\111.txt')
+message = classicalciphers.readfile(r'111.txt')
 print('---Break Caesar cipher---')
 ciphertext = classicalciphers.Caesar.encrypt(message, 16)
 print(ciphertext)
@@ -285,7 +285,6 @@ print(breakcolumnarcipher(ciphertext, 6))
 print('---Break Playfair cipher---')
 key=classicalciphers.Playfair.buildtable('monarchy'.upper())
 ciphertext = classicalciphers.Playfair.encrypt(message, key)
-print(trigramfitness(message))
 print(ciphertext)
 print(trigramfitness(ciphertext))
 for i in range(20):
