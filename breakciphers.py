@@ -48,7 +48,7 @@ def alphabetcorrelation(messagefrequency):
 #Break Caesar encryption by trying all possible key and check is frequency in decrypted message corresponds to english
 def breakcaesar(ciphertext):
     variants=[]
-    for i in range(25):
+    for i in range(26):
         d=classicalciphers.Caesar.decrypt(ciphertext, i)
         msg_frequency=frequency(d)
         variants.append((i, alphabetcorrelation(msg_frequency)))
